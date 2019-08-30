@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+message ContactFormRequest {
+	required string subject = 1;
+	required string message = 2;
+	required string sender = 3;
+	required bool active = 4;
+}
+
+message Error {
+   optional string field = 1;
+   repeated string messages = 2;
+}
+
+message ErrorResponse {
+   repeated Error error = 1;
+}
